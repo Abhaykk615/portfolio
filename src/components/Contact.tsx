@@ -42,7 +42,8 @@ export default function Contact() {
       setIsSuccess(true);
       setStatus("Message sent successfully!");
       setFormData({ ...formData, message: "" });
-    } catch (error) {
+    } catch {
+      // Removed unused 'error'
       setIsSuccess(false);
       setStatus("Failed to send message. Try again later.");
     }
@@ -106,7 +107,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={isLoading}
-            className={`w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-lg hover:shadow-cyan-500/30 disabled:opacity-60 disabled:cursor-not-allowed`}
+            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-lg hover:shadow-cyan-500/30 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isLoading && (
               <svg
