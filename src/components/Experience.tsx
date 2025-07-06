@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Web Developer Intern",
-    company: "The Spark Foundation",
-    date: "Feb 2024 – March 2024",
+    title: "Web Development Intern",
+    company: "VaultofCodes.in",
+    date: "June 2025 – July 2025",
     description:
-      "Built and deployed a donation payment gateway using HTML, CSS, JavaScript and Razorpay integration. Gained experience in responsive frontend design and payment systems.",
+      "Successfully completed a one-month internship focused on full-stack web development. Built and deployed responsive web apps and was recognized for sincerity, technical skill, and on-time delivery.",
   },
   {
     title: "Virtual Internship Trainee",
@@ -27,7 +27,9 @@ export default function Experience() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">Experience</h2>
+      <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
+        Experience
+      </h2>
 
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
         {experiences.map((exp, index) => (
@@ -42,7 +44,9 @@ export default function Experience() {
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm" />
             <div className="relative z-10">
               <h3 className="text-lg font-semibold text-blue-400 mb-1">{exp.title}</h3>
-              <p className="text-sm text-gray-400 mb-2">{exp.company} • {exp.date}</p>
+              <p className="text-sm text-gray-400 mb-2">
+                {exp.company} • {exp.date}
+              </p>
               <p className="text-sm text-blue-200">{exp.description}</p>
             </div>
           </motion.div>
