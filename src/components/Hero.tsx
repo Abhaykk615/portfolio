@@ -18,7 +18,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        Hi, I'm{" "}
+        Hi, I&apos;m{" "}
         <span className="underline underline-offset-8 decoration-blue-500">
           Abhay Kumar
         </span>
@@ -30,7 +30,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        I'm a Full Stack Developer focused on building beautiful, performant
+        I&apos;m a Full Stack Developer focused on building beautiful, performant
         web apps with modern tech like React, Firebase, and Tailwind.
       </motion.p>
 
@@ -44,7 +44,7 @@ export default function Hero() {
           href="#contact"
           className="px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl shadow-md hover:shadow-cyan-500/30 text-white transition-all duration-300"
         >
-          Let’s Connect
+          Let&apos;s Connect
         </Link>
 
         <a
