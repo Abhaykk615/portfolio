@@ -23,13 +23,13 @@ export default function About() {
       >
         <div className="flex-1">
           <p className="text-blue-200 text-lg leading-relaxed mb-6">
-            I'm <span className="font-semibold text-blue-400">Abhay Kumar</span>, a full-stack developer currently pursuing B.Tech in Information Technology. I love turning complex ideas into real, usable web apps.
+            I&#39;m <span className="font-semibold text-blue-400">Abhay Kumar</span>, a full-stack developer currently pursuing B.Tech in Information Technology. I love turning complex ideas into real, usable web apps.
           </p>
           <p className="text-blue-200 text-lg leading-relaxed mb-6">
-            I'm skilled in building responsive and accessible websites using React, Next.js, Firebase, and Tailwind CSS. I’ve created multiple personal projects and participated in internships and tech events that shaped my practical development mindset.
+            I&#39;m skilled in building responsive and accessible websites using React, Next.js, Firebase, and Tailwind CSS. I&#39;ve created multiple personal projects and participated in internships and tech events that shaped my practical development mindset.
           </p>
           <p className="text-blue-200 text-lg leading-relaxed mb-6">
-            I'm always looking to grow, whether it's through coding challenges, internships, or collaborating with like-minded developers.
+            I&#39;m always looking to grow, whether it&#39;s through coding challenges, internships, or collaborating with like-minded developers.
           </p>
 
           {/* Social Icons */}

@@ -5,11 +5,16 @@ import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    message: string;
+  }>({
     name: "Abhay Kumar",
     email: "abhaykk615@gmail.com",
     message: ""
   });
+
   const [status, setStatus] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -21,6 +26,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+
     try {
       await emailjs.send(
         "service_dkrye08",
@@ -40,6 +46,7 @@ export default function Contact() {
       setIsSuccess(false);
       setStatus("Failed to send message. Try again later.");
     }
+
     setIsLoading(false);
     setTimeout(() => setStatus(null), 4000);
   };
@@ -55,13 +62,14 @@ export default function Contact() {
       <div className="w-full max-w-xl bg-gradient-to-br from-blue-800/30 to-green-700/10 p-8 rounded-2xl shadow-xl border border-white/10 backdrop-blur">
         <h2 className="text-3xl font-bold text-blue-400 mb-2 text-center">Get in Touch</h2>
         <p className="text-gray-400 text-sm mb-6 text-center">
-          I'd love to hear from you. Send me a message!
+          I&apos;d love to hear from you. Send me a message!
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-semibold mb-1">Name</label>
+            <label htmlFor="name" className="block text-sm font-semibold mb-1">Name</label>
             <input
+              id="name"
               name="name"
               value={formData.name}
               readOnly
@@ -70,8 +78,9 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-1">Email address</label>
+            <label htmlFor="email" className="block text-sm font-semibold mb-1">Email address</label>
             <input
+              id="email"
               name="email"
               type="email"
               value={formData.email}
@@ -81,8 +90,9 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-1">Message</label>
+            <label htmlFor="message" className="block text-sm font-semibold mb-1">Message</label>
             <textarea
+              id="message"
               name="message"
               rows={4}
               value={formData.message}
