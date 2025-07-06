@@ -22,7 +22,7 @@ export default function Footer() {
         >
           <h3 className="text-lg font-semibold text-white mb-4">About Me</h3>
           <p>
-            I'm Abhay Kumar, a full-stack web developer and tech enthusiast. I love building modern,
+            I&apos;m Abhay Kumar, a full-stack web developer and tech enthusiast. I love building modern,
             responsive websites and solving real-world problems through code.
           </p>
         </motion.div>
@@ -52,7 +52,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/abhaykk615/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-blue-400 transition"
@@ -101,16 +101,22 @@ export default function Footer() {
         >
           <h3 className="text-lg font-semibold text-white mb-4">Contact Me</h3>
           <ul className="space-y-2">
-            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-blue-400" /> Jhansi, UP</li>
-            <li className="flex items-center gap-2"><FaEnvelope className="text-green-400" /> abhaykk615@gmail.com</li>
-            <li className="flex items-center gap-2"><FaPhone className="text-blue-500" /> +91 89530 14140</li>
+            <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-blue-400" /> Jhansi, UP
+            </li>
+            <li className="flex items-center gap-2">
+              <FaEnvelope className="text-green-400" /> abhaykk615@gmail.com
+            </li>
+            <li className="flex items-center gap-2">
+              <FaPhone className="text-blue-500" /> +91 89530 14140
+            </li>
           </ul>
         </motion.div>
       </div>
 
       {/* Copyright */}
       <div className="mt-12 text-center text-sm text-gray-600 border-t border-white/10 pt-6">
-        © {new Date().getFullYear()} Designed & Built by Abhay Kumar. All rights reserved.
+        © {new Date().getFullYear()} Designed &amp; Built by Abhay Kumar. All rights reserved.
       </div>
     </footer>
   );
