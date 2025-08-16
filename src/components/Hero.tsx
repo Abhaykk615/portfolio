@@ -48,7 +48,7 @@ export default function Hero() {
         </Link>
 
         <a
-          href="/Abhay_Kumar_Resume.pdf"
+          href="/Abhay_resume.pdf"
           download
           className="px-6 py-3 text-sm font-semibold border border-blue-500 text-blue-400 rounded-xl hover:bg-blue-500 hover:text-white transition duration-300"
         >

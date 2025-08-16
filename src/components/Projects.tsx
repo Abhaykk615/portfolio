@@ -7,21 +7,21 @@ const projects = [
     description: "A student dashboard with login, task tracking, and Firebase integration.",
     tech: ["React", "Firebase", "Tailwind"],
     github: "https://github.com/Abhaykk615/studysync",
-    demo: "https://studysync-demo.vercel.app",
+    demo: "https://studysync-client.web.app/",
   },
   {
     title: "Recipe Card",
     description: "Interactive recipe card showcasing ingredients and instructions.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Abhaykk615/recipe-card",
-    demo: "https://recipe-card-nine-liard.vercel.app/",
+    github: "https://github.com/Abhaykk615/Recipe_card",
+    demo: "https://abhaykk615.github.io/Recipe_card/",
   },
   {
     title: "Tic-Tac-Toe Game",
     description: "Classic Tic-Tac-Toe game with simple UI and two-player mode.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Abhaykk615/tic-tac-toe",
-    demo: "https://tic-tac-toe-nine-orpin.vercel.app/",
+    github: "https://github.com/Abhaykk615/Tic-toe-game",
+    demo: "https://abhaykk615.github.io/Tic-toe-game/",
   },
 ];
 

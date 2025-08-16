@@ -35,7 +35,7 @@ export default function About() {
           {/* Social Icons */}
           <div className="flex gap-5 mt-6">
             <a
-              href="https://www.linkedin.com/in/abhaykk615/"
+              href="https://www.linkedin.com/in/abhay-kumar-1b965225b/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-white transition hover:scale-110"
