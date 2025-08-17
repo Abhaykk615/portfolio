@@ -16,6 +16,15 @@ const experiences = [
     description:
       "Completed virtual internships in Cybersecurity and Data Analytics. Practiced handling data pipelines, dashboards, and audit frameworks with business-oriented solutions.",
   },
+  {
+    title: "Oracle Certified Foundations Associate – AI Foundations",
+    company: "Oracle University",
+    date: "Aug 2025",
+    description:
+      "Earned the Oracle Certified Foundations Associate – AI Foundations credential. Gained expertise in AI principles, applications, and industry practices.",
+    badgeLink:
+      "https://catalog-education.oracle.com/pls/certview/sharebadge?id=2946E93C2BB944635E8DF0B38FE750F2A34565135F7D24F53A0D0447736B6EBF",
+  },
 ];
 
 export default function Experience() {
@@ -47,7 +56,17 @@ export default function Experience() {
               <p className="text-sm text-gray-400 mb-2">
                 {exp.company} • {exp.date}
               </p>
-              <p className="text-sm text-blue-200">{exp.description}</p>
+              <p className="text-sm text-blue-200 mb-3">{exp.description}</p>
+              {exp.badgeLink && (
+                <a
+                  href={exp.badgeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-blue-400 border border-blue-500 px-3 py-1 rounded-md text-xs font-medium hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                >
+                  View Badge
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

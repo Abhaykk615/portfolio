@@ -8,7 +8,7 @@ import Experience from '@/components/Experience'
 import TechStack from '@/components/TechStack'
 import ScrollToTop from '@/components/ScrollToTop'
 import PositionOfResponsibility from '@/components/PositionOfResponsibility';
-
+import Achievements from "@/components/Achievements";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <Projects />
       <PositionOfResponsibility />
       <TechStack />
+      <Achievements />
       <Contact />
       <Footer />
       <ScrollToTop />

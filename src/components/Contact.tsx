@@ -5,23 +5,10 @@ import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const [formData, setFormData] = useState<{
-    name: string;
-    email: string;
-    message: string;
-  }>({
-    name: "Abhay Kumar",
-    email: "abhaykk615@gmail.com",
-    message: ""
-  });
-
+  const [message, setMessage] = useState("");
   const [status, setStatus] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setFormData({ ...formData, message: e.target.value });
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,18 +19,18 @@ export default function Contact() {
         "service_dkrye08",
         "template_fw666ur",
         {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          title: "New Message"
+          name: "Abhay Kumar",
+          email: "abhaykk615@gmail.com",
+          message: message,
+          title: "New Message",
         },
         "NOp5SwSpboWzZwn3y"
       );
+
       setIsSuccess(true);
       setStatus("Message sent successfully!");
-      setFormData({ ...formData, message: "" });
+      setMessage("");
     } catch {
-      // Removed unused 'error'
       setIsSuccess(false);
       setStatus("Failed to send message. Try again later.");
     }
@@ -68,36 +55,42 @@ export default function Contact() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold mb-1">Name</label>
+            <label htmlFor="name" className="block text-sm font-semibold mb-1">
+              Name
+            </label>
             <input
               id="name"
               name="name"
-              value={formData.name}
+              defaultValue="Abhay Kumar"
               readOnly
               className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold mb-1">Email address</label>
+            <label htmlFor="email" className="block text-sm font-semibold mb-1">
+              Email address
+            </label>
             <input
               id="email"
               name="email"
               type="email"
-              value={formData.email}
+              defaultValue="abhaykk615@gmail.com"
               readOnly
               className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold mb-1">Message</label>
+            <label htmlFor="message" className="block text-sm font-semibold mb-1">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
               rows={4}
-              value={formData.message}
-              onChange={handleChange}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
               className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your message here..."
@@ -109,28 +102,6 @@ export default function Contact() {
             disabled={isLoading}
             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-lg hover:shadow-cyan-500/30 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {isLoading && (
-              <svg
-                className="animate-spin h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                ></path>
-              </svg>
-            )}
             {isLoading ? "Sending..." : "Send Message"}
           </button>
         </form>
